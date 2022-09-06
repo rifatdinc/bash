@@ -34,7 +34,27 @@ pkill -f python3
 ```text
 upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|percentage"
 ```
-## Http request load test => POST 
+
+## Http request load test & POST
 
 ```text
 ab -p data.txt -T application/json -H 'Authorization: asv9asc9aj' -c 10 -n 4000 http://127.0.0.1:12019/
+```
+
+## How to find public IP address
+
+```text
+curl ifconfig.me
+```
+
+## Random hash create
+
+```text
+echo date | sha224sum
+```
+
+### Only port check
+
+```text
+nmap -p 80 127.0.0.1
+```
