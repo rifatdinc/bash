@@ -58,3 +58,15 @@ echo date | sha224sum
 ```text
 nmap -p 80 127.0.0.1
 ```
+
+## executing the desired command every 1 second
+
+```text
+watch -n 1 echo code
+```
+
+## First 10 output
+
+```text
+echo data.txt | head -n 5
+```
