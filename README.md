@@ -65,8 +65,13 @@ nmap -p 80 127.0.0.1
 watch -n 1 echo code
 ```
 
-## First 10 output
+## First 5 output
 
 ```text
 echo data.txt | head -n 5
+```
+
+## kill proccess name
+```text
+kill $(ps aux | grep node | awk '{print $2}')
 ```
