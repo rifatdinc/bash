@@ -75,3 +75,10 @@ echo data.txt | head -n 5
 ```text
 kill $(ps aux | grep node | awk '{print $2}')
 ```
+
+## If we want to delete a file under a folder, we can use this command
+   
+   ```text
+   find ./ -name "file_name" | xargs rm -rf
+   
+   ```
