@@ -82,3 +82,23 @@ kill $(ps aux | grep node | awk '{print $2}')
    find ./ -name "file_name" | xargs rm -rf
    
    ```
+
+
+## Interfaces list
+
+```text
+# Örnek Bash komutu
+
+# Sistemdeki ağ arayüzlerinin listesini alın
+interfaces=$(ifconfig | awk -F':' '/^[a-z]/ && !/^lo/ {print $1}')
+
+# Her ağ arayüzü için bilgileri ekrana yazdırın
+for interface in $interfaces
+do
+  echo "Arayüz: $interface"
+  echo "  IP adresi: $(ifconfig $interface | awk '/inet / {print $2}')"
+  echo "  Mask: $(ifconfig $interface | awk '/netmask / {print $4}')"
+  echo "  MAC adresi: $(ifconfig $interface | awk '/ether/ {print $2}')"
+  echo ""
+done
+```
