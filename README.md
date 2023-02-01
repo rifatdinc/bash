@@ -87,7 +87,6 @@ kill $(ps aux | grep node | awk '{print $2}')
 ## Interfaces list
 
 ```text
-# Örnek Bash komutu
 
 # Sistemdeki ağ arayüzlerinin listesini alın
 interfaces=$(ifconfig | awk -F':' '/^[a-z]/ && !/^lo/ {print $1}')
@@ -101,4 +100,18 @@ do
   echo "  MAC adresi: $(ifconfig $interface | awk '/ether/ {print $2}')"
   echo ""
 done
+```
+
+
+## Find hostname
+
+```text
+
+echo "Please enter an IP address: "
+
+read ip_address
+
+host=$(nslookup $ip_address | awk '/^Name:/ {print $2}')
+
+echo "The host name of the entered IP address: $host"
 ```
