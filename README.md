@@ -115,3 +115,9 @@ host=$(nslookup $ip_address | awk '/^Name:/ {print $2}')
 
 echo "The host name of the entered IP address: $host"
 ```
+
+## Replace the content of a specific file based on a specific word or expression - EN
+## Belirli bir dosyanın içeriğini belirli bir kelime veya ifadeye göre değiştirme - TR
+```text
+sed -i 's/eski_kelime/yeni_kelime/g' dosya_adı
+```
