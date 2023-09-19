@@ -68,7 +68,7 @@ watch -n 1 echo code
 ## First 5 output
 
 ```text
-echo data.txt | head -n 5
+cat data.txt | head -n 5
 ```
 
 ## kill proccess name
